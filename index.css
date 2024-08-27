@@ -6,7 +6,6 @@
 body {
   background-color: hsl(0, 0%, 81%);
   min-height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,9 +20,12 @@ body {
     "jeanette  patrick   patrick  kira ";
 
   grid-gap: 30px;
-  margin: 50px;
+  width: 100%;
+  margin: 100px;
+  height: max-content;
 }
 article {
+
   padding: 2rem;
   border-radius: 0.5rem;
   display: flex;
@@ -39,8 +41,8 @@ article {
   background-position: right 3rem top 1rem;
   padding: 10px;
   border-radius: 12px;
-  grid-area: daniel;
-  grid-area: 1 / 1 / 2 / 3;
+  grid-area: daniel;  
+  
   color: white;
 }
 .daniel-img {
@@ -72,16 +74,14 @@ h3 {
 .daniel-paragraph {
   color: hsl(0, 2%, 64%);
   padding: 10px;
-
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 .jonathan {
   background-color: hsl(217, 19%, 35%);
-
+ 
   color: white;
   border-radius: 12px;
   padding: 10px;
-  grid-area: 1 / 3 / 1 / 4;
   grid-area: jonathan;
 }
 .jeanette {
@@ -90,7 +90,7 @@ h3 {
   border-radius: 12px;
   grid-area: jeanette;
   padding: 10px;
-  grid-area: 2 / 1 / 3 / 2;
+ 
 }
 .patrick {
   background-color: hsl(219, 29%, 14%);
@@ -98,7 +98,8 @@ h3 {
   color: white;
   padding: 10px;
   grid-area: patrick;
-  grid-area: 2 / 2 / 3 / 4;
+
+
 }
 .kira {
   background-color: white;
@@ -106,15 +107,11 @@ h3 {
   padding: 10px;
   grid-area: kira;
   border-radius: 12px;
-  grid-area: 1 / 4 / 3 / 5;
-  max-width: 350px;
+  
 }
 
 @media (max-width: 950px) {
   .main-container {
-    /* display: grid; */
-    /* margin: 20px 60px; */
-  
     grid-template-columns: repeat(2, fr);
     grid-template-rows: repeat(3, fr);
     grid-template-areas: 
@@ -122,7 +119,9 @@ h3 {
         "jonathan"
         "jeanette"
         "patrick"
+   
         "kira";
+     
   }
   article{
     width: 100%;
@@ -160,8 +159,9 @@ h3 {
     padding: 20px;
   }
   .main-container {
-    /* width: 350px; */
+    width: 100%;
     height: fit-content;
+
     grid-gap: 10px;
       display: flex;
       flex-direction: column;
